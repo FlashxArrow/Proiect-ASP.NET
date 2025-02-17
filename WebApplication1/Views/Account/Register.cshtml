@@ -1,0 +1,30 @@
+﻿@model RegisterViewModel
+
+<h2>Înregistrare</h2>
+
+<form method="post">
+
+    <div class="form-group">
+        <label for="Username">Nume utilizator</label>
+        <input type="text" class="form-control" id="Username" name="Username"  required />
+    </div>
+
+    <div class="form-group">
+        <label for="Email">Adresă de email</label>
+        <input type="email" class="form-control" id="Email" name="Email"  required />
+    </div>
+
+    <div class="form-group">
+        <label for="Password">Parolă</label>
+        <input type="password" class="form-control" id="Password" name="Password" required />
+    </div>
+
+    <div class="form-group">
+        <label for="ConfirmPassword">Confirmă parola</label>
+        <input type="password" class="form-control" id="ConfirmPassword" name="ConfirmPassword" required />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Înregistrează-te</button>
+</form>
+
+

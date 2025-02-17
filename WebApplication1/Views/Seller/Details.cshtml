@@ -1,0 +1,28 @@
+﻿@model WebApplication1.Models.DBObjects.Comic
+
+<h2>Detalii produs: @Model.ComicName</h2>
+
+<div class="card">
+    <img src="@Model.ImageUrl" class="card-img-top" alt="@Model.ComicName">
+    <div class="card-body">
+        <h5 class="card-title">@Model.ComicName</h5>
+        <p class="card-text"><strong>Preț:</strong> @Model.Price €</p>
+        <p class="card-text"><strong>Stoc:</strong> @Model.Stock</p>
+        <p class="card-text"><strong>Descriere:</strong> @Model.ShortDescription</p>
+
+        <!-- Edit Button -->
+        <a href="/Seller/Edit/@Model.IdComic" class="btn btn-warning">
+            <i class="fas fa-edit"></i> Modifică produs
+        </a>
+
+        <!-- Delete Button -->
+        <a href="/Seller/Delete/@Model.IdComic" class="btn btn-danger" onclick="return confirm('Ești sigur că vrei să ștergi acest produs?');">
+            <i class="fas fa-trash"></i> Șterge
+        </a>
+
+        <!-- Back Button -->
+        <a href="/Seller" class="btn btn-secondary">
+            <i class="fas fa-arrow-left"></i> Înapoi la produse
+        </a>
+    </div>
+</div>

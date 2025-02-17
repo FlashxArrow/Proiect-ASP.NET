@@ -1,0 +1,41 @@
+﻿@{
+    ViewData["Title"] = "Produse";
+}
+
+<h2>Produse</h2>
+
+<!-- Filtrare și Căutare -->
+<form method="get" action="/Products/Index">
+    <div class="form-row">
+        <div class="col-md-6">
+            <input type="text" name="searchString" class="form-control" placeholder="Căutare produse...">
+        </div>
+        <div class="col-md-6">
+            <select name="filter" class="form-control">
+                <option value="">Toate francizele</option>
+                <option value="Marvel">Marvel</option>
+                <option value="DC">DC</option>
+                <option value="Manga">Manga</option>
+            </select>
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary mt-2">Filtrează</button>
+</form>
+
+@foreach (var comic in Model)
+{
+    <div class="col-md-4 mb-4">
+        <div class="card">
+            <img src="@comic.ImageUrl" class="card-img-top" alt="@comic.ComicName">
+            <div class="card-body">
+                <h5 class="card-title">@comic.ComicName</h5>
+                <p class="card-text">Autor: @comic.IdAuthorNavigation?.AuthorName</p>
+                <p class="card-text">Preț: @comic.Price €</p>
+                <p class="card-text">Rating: @comic.Rating</p>
+                <a href="/Products/Details/@comic.IdComic" class="btn btn-primary">Vezi detalii</a>
+                <a href="/Cart/AddToCart/@comic.IdComic" class="btn btn-success">Adaugă în coș</a>
+            </div>
+        </div>
+    </div>
+}
+

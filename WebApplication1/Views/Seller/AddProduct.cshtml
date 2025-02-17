@@ -1,0 +1,32 @@
+﻿@model WebApplication1.Models.DBObjects.Comic
+
+<h2>Adaugă un produs</h2>
+
+<form method="post">
+    <div class="form-group">
+        <label for="ComicName">Nume produs</label>
+        <input type="text" class="form-control" id="ComicName" name="ComicName" required />
+    </div>
+
+    <div class="form-group">
+        <label for="Price">Preț</label>
+        <input type="number" step="0.01" class="form-control" id="Price" name="Price" required />
+    </div>
+
+    <div class="form-group">
+        <label for="ShortDescription">Descriere scurtă</label>
+        <textarea class="form-control" id="ShortDescription" name="ShortDescription"></textarea>
+    </div>
+
+    <div class="form-group">
+        <label for="Stock">Stoc</label>
+        <input type="number" class="form-control" id="Stock" name="Stock" required />
+    </div>
+
+    <div class="form-group">
+        <label for="ImageUrl">Imagine</label>
+        <input class="form-control" id="ImageUrl" name="ImageUrl" required />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Adaugă produs</button>
+</form>

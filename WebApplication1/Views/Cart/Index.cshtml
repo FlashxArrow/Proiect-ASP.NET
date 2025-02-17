@@ -1,0 +1,36 @@
+﻿@{
+    ViewData["Title"] = "Coș de cumpărături";
+}
+
+<h2>Coș de cumpărături</h2>
+
+@if (Model.Count == 0)
+{
+    <p>Coșul tău este gol.</p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Produs</th>
+                <th>Preț</th>
+                <th>Acțiuni</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.ComicName</td>
+                    <td>@item.Price €</td>
+                    <td>
+                        <a href="/Cart/RemoveFromCart/@item.IdComic" class="btn btn-danger">Șterge</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <a href="/Cart/Checkout" class="btn btn-primary">Finalizează comanda</a>
+}

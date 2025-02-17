@@ -1,0 +1,29 @@
+﻿@model List<WebApplication1.Models.DBObjects.Order>
+
+<h2>Toate comenzile</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Utilizator</th>
+            <th>Produs</th>
+            <th>Data</th>
+            <th>Stare</th>
+            <th>Acțiuni</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var order in Model)
+        {
+            <tr>
+                <td>@order.IdUser</td>
+                <td>@order.IdComicNavigation?.ComicName</td>
+                <td>@order.OrderDate?.ToString("d")</td>
+                <td>@order.OrderStatus</td>
+                <td>
+                    <a href="/Orders/CancelOrder/@order.IdOrder" class="btn btn-danger">Anulează</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
