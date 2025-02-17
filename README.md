@@ -3,7 +3,8 @@
 Acest proiect reprezintă un magazin online de graphic novels, unde utilizatorii pot cumpăra benzi desenate, vinde propriile produse (daca sunt selleri) și administra comenzile (daca sunt admini).
 
 ## **Diagrama bazei de date**
-![image](https://github.com/user-attachments/assets/4581dea4-4c54-45b5-8d59-444c3b32e10e)
+![image](https://github.com/user-attachments/assets/d01bdfc8-d99e-4362-8412-cc9972317977)
+
 
 
 ## **Structura bazei de date**
